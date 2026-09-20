@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VELORA Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="logo" id="logo-btn">VELORA</div>
+    <nav class="nav-links">
+      <button id="nav-products-btn" class="nav-btn">Products</button>
+      <button id="nav-about-btn" class="nav-btn">About</button>
+      <button id="nav-cart-btn" class="nav-btn">Cart (<span id="cart-count">0</span>)</button>
+      <div id="auth-container">
+        <button id="nav-login-btn" class="nav-btn">Login / Register</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- View 1: Catalog -->
+    <section id="catalog-view" class="view">
+      <div class="hero-banner">
+        <h1>Featured Collection</h1>
+        <p>Explore our premium tech accessories and electronics</p>
+      </div>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+    <!-- View 2: Product Details -->
+    <section id="details-view" class="view hidden">
+      <button id="back-to-products" class="back-btn">&larr; Back to Products</button>
+      <div id="product-detail-card" class="detail-card"></div>
+    </section>
+
+    <!-- View 3: Cart -->
+    <section id="cart-view" class="view hidden">
+      <h2>Your Shopping Cart</h2>
+      <div id="cart-items-list" class="cart-list"></div>
+      <div class="cart-summary">
+        <h3>Total: <span id="cart-total-price">₹0</span></h3>
+        <button id="checkout-btn" class="btn checkout-btn">Checkout</button>
+      </div>
+    </section>
+
+    <!-- View 4: About Page -->
+    <section id="about-view" class="view hidden">
+      <div class="about-card">
+        <h2>About VELORA</h2>
+        <p class="about-description">
+          VELORA is your premium destination for high-quality electronics and modern tech accessories. We focus on delivering top-tier performance, sleek aesthetics, and reliable customer service.
+        </p>
+
+        <div class="store-details-grid">
+          <div class="info-box">
+            <h3>📍 Store Address</h3>
+            <p>123 Tech Park Avenue, Suite 400<br>Silicon Hub, IN 560001</p>
+          </div>
+
+          <div class="info-box">
+            <h3>📧 Contact Email</h3>
+            <p>support@velorastore.com<br>orders@velorastore.com</p>
+          </div>
+
+          <div class="info-box">
+            <h3>📞 Customer Support</h3>
+            <p>+91 (800) 123-4567<br>Mon - Sat: 9:00 AM - 7:00 PM IST</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- View 5: Authentication -->
+    <section id="auth-view" class="view hidden">
+      <div class="auth-card" id="login-form-container">
+        <h2>Login</h2>
+        <form id="login-form">
+          <input type="email" id="login-email" placeholder="Email" required />
+          <input type="password" id="login-password" placeholder="Password" required />
+          <button type="submit" class="btn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="switch-to-register">Register</a></p>
+      </div>
+
+      <div class="auth-card hidden" id="register-form-container">
+        <h2>Register</h2>
+        <form id="register-form">
+          <input type="text" id="reg-username" placeholder="Username" required />
+          <input type="email" id="reg-email" placeholder="Email" required />
+          <input type="password" id="reg-password" placeholder="Password" required />
+          <button type="submit" class="btn">Register</button>
+        </form>
+        <p>Already have an account? <a href="#" id="switch-to-login">Login</a></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
